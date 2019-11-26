@@ -12,11 +12,11 @@ int main()
                 char sb_bebida[255] = " ";
                 int vl_pizza = 0;
                 int vl_bebida = 0;
-                int n = 0;
+                int vl_total = 0;
                 fprintf(file,"Mes: %i\n", mm);
                 fprintf(file,"Dia: %i\n", dd);
                 fprintf(file,"Cpf: 34832717839\n");
-                int vl_total = 0;
+                int n = rand()%3;
                 for(int i = 0; i < n; i++){
                     int pizza = rand()%5;
                     switch(pizza){
