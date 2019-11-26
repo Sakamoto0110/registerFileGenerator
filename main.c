@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 int main()
 {
     FILE* file = fopen("registro.txt", "w+");
@@ -16,7 +17,7 @@ int main()
                 fprintf(file,"Mes: %i\n", mm);
                 fprintf(file,"Dia: %i\n", dd);
                 fprintf(file,"Cpf: 34832717839\n");
-                int n = rand()%3;
+                int n = 1+rand()%3;
                 for(int i = 0; i < n; i++){
                     int pizza = rand()%5;
                     switch(pizza){
