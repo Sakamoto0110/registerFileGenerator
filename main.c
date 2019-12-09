@@ -4,10 +4,15 @@
 #include <time.h>
 int main()
 {
+    srand(22343152125);
     FILE* file = fopen("registro.txt", "w+");
+
+    int maxPizzaPedido = 2;
+    int maxPizzasDia = 4;
+    int maxBebidaDia = 3;
     for(int mm = 1; mm <= 12; mm++){
         for(int dd = 1; dd <= 30; dd++){
-            int nPizzas = 5+rand()%10;
+            int nPizzas = 5+rand()%maxPizzaPedido;
             for(int c = 0; c < nPizzas; c++){
                 char sb_pizza[255] = " ";
                 char sb_bebida[255] = " ";
@@ -17,7 +22,7 @@ int main()
                 fprintf(file,"Mes: %i\n", mm);
                 fprintf(file,"Dia: %i\n", dd);
                 fprintf(file,"Cpf: 34832717839\n");
-                int n = 1+rand()%3;
+                int n = 1+rand()%maxPizzasDia;
                 for(int i = 0; i < n; i++){
                     int pizza = rand()%5;
                     switch(pizza){
@@ -49,7 +54,7 @@ int main()
                     }
                     fprintf(file,"Pizza: %s %i\n", sb_pizza, vl_pizza);
                 }
-                n = rand()%4;
+                n = rand()%maxBebidaDia;
                 for(int i = 0; i < n; i++){
                     int bebida = rand()%3;
                     switch(bebida){
@@ -78,3 +83,25 @@ int main()
     fclose(file);
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
